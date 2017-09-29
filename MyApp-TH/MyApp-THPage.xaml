@@ -1,11 +1,124 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:MyAppTH"
-	x:Class="MyAppTH.MyApp_THPage">
-	<Label
-		Text="Welcome to Xamarin Forms!"
-		VerticalOptions="Center"
-		HorizontalOptions="Center" />
+	x:Class="MyAppTH.MyApp_THPage"
+    BackgroundColor="Gray">
+
+    <ScrollView
+        Padding="5,0,5,5">
+
+    
+
+    <StackLayout
+        Orientation="Vertical">
+
+         <Label
+            Text="กรุณากรอกข้อมูล"
+            TextColor="White"
+            HorizontalOptions="Center"
+            FontSize="20"/>
+         <Label
+                Text="ชื่อ"
+                FontSize="14"
+            TextColor="Aqua"/>
+         
+         <Entry
+            Placeholder="ชื่อ"
+            Keyboard="Text"
+            x:Name="firstNameEntry"
+            Margin="5,0,5,0"/>
+        <Label
+                Text="นามสกุล"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <Entry
+            Placeholder="นามสกุล"
+            Keyboard="Text"
+            x:Name="lastNameEntry"
+            Margin="5,0,5,0"/>
+
+        <Label
+                Text="เพศ"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <Picker
+            x:Name="genderPicker"
+            Title="กรุณาเลือกเพศ"
+            Margin="5,0,5,0"/>
+
+
+        <Label
+                Text="วัน/เดือน/ปี"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <DatePicker/>
+
+            
+         <Label
+                Text="เบอร์โทรศัพท์"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <Entry
+            Placeholder="เบอร์โทรศัพท์"
+            Keyboard="Telephone"
+            x:Name="phoeEntry"
+            Margin="5,0,5,0"/>
+
+        <Label
+                Text="E-mail"
+                FontSize="14"
+            TextColor="Aqua"/>
+       <Entry
+            Placeholder="E-mail"
+            Keyboard="Email"
+            x:Name="emailEntry"
+            Margin="5,0,5,0"/>
+
+        <Label
+                Text="Website"
+                FontSize="14"
+            TextColor="Aqua"/>
+       <Entry
+            Placeholder="Website"
+            Keyboard="Url"
+            x:Name="webEntry"
+            Margin="5,0,5,0"/>
+
+
+         <Label
+                Text="เงินเดือน"
+                FontSize="14"
+            TextColor="Aqua"/>
+
+         <Slider
+            Maximum="100000"
+            Minimum="0"
+            Value="0"
+            x:Name="salarySlider"
+        />
+
+        <Label
+                Text="แต่งงาน ?"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <Switch/>
+
+        <Label
+                Text="บุตร"
+                FontSize="14"
+            TextColor="Aqua"/>
+        <Stepper
+            Maximum="10"
+            Minimum="0"
+            Value="0"
+            Increment="1"
+            x:Name="childentStepper"/>
+
+        
+
+    </StackLayout>
+    </ScrollView>
+    
 </ContentPage>
